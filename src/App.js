@@ -1,23 +1,22 @@
 import logo from './virtualDeckLogoNoText.png';
-import './App.css';
+import Navbar from './components/Navbar.jsx'
+import Home from './components/Home.jsx'
+import About from './components/About.jsx'
+import Download from './components/Download.jsx'
+import Contact from './components/Contact.jsx'
+import { React, useState } from 'react';
 
 function App() {
+
+  const [section, setSection] = useState("home");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="text-red-500"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="">
+      <Navbar section={section} setSection={setSection} />
+        {section === "home" && <Home />}
+        {section === "about" && <About />}
+        {section === "download" && <Download />}
+        {section === "contact" && <Contact />}
     </div>
   );
 }
