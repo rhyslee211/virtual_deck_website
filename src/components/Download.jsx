@@ -1,11 +1,13 @@
 import { React , useState , useEffect } from "react";
+import DownloadCard from "./DownloadCard";
 
 const Download = ({downloadType}) => {
 
     const [downloadDictionary, setDownloadDictionary] = useState({
         "windowsLatest": {
             name: "Windows Latest",
-            version: "1.0.0", 
+            os: "Windows",
+            version: "0.9.0", 
             url: "https://github.com/rhyslee211/virtual-deck/releases/download/V0.1-windows-beta/Virtual_Deck.exe"
         }
     });
@@ -19,15 +21,8 @@ const Download = ({downloadType}) => {
 
     return (
     <div>
-        <div className="bg-gray-700 h-full flex-grow flex flex-col items-center">
-            {downloadInfo !== null &&
-            <div className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-4 h-fit">
-                <button onClick={() => window.open(downloadInfo.url)}>
-                    <div className="flex flex-row items-center">
-                        {downloadInfo.name} {downloadInfo.version}
-                    </div>
-                </button>
-            </div>}
+        <div className="bg-gray-700 h-full flex-grow flex flex-col items-center justify-center">
+            {downloadInfo !== null && <DownloadCard downloadInfo={downloadInfo} />}
         </div>
     </div>
     );

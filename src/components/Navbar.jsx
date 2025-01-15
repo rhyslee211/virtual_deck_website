@@ -21,6 +21,13 @@ const Navbar = ({setSection, section}) => {
             <h1 style={companyNameStyle} className="text-2xl flex flex-row"><div className="text-cyan-300">Virtual</div>&nbsp;<div className="text-red-600">Deck</div></h1>
           </button>
         </div>
+        <div className="flex lg:hidden">
+          <button className="flex flex-row items-center align-middle px-2" onClick={() => setNavbarOpen(!navbarOpen)}>
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+        </div>
       </div>
       <nav className="px-4 bg-slate-900 text-white flex flex-row justify-between items-center align-middle hidden lg:flex">
         <div className="hidden w-full lg:block" id="navbar-default">
@@ -48,13 +55,6 @@ const Navbar = ({setSection, section}) => {
           </ul>
         </div>
       </nav>
-        <div className="flex lg:hidden">
-          <button className="flex flex-row items-center align-middle px-2" onClick={() => setNavbarOpen(!navbarOpen)}>
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
-          </button>
-        </div>
       <div className={`lg:hidden border-t border-gray-600 w-5/6 flex justify-center ${navbarOpen ? "block" : "hidden"}`}>
           <ul className="text-lg flex flex-col items-start ">
             <li className={`${section === "home" ? "text-red-500" : ""}`}>
