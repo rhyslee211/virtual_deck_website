@@ -1,12 +1,15 @@
 import React from "react";
 import Logo from '../assets/virtualDeckLogoNoText.png';
+import { Link , useLocation } from 'react-router-dom';
 
-const Navbar = ({setSection, section}) => {
+const Navbar = () => {
 
   const companyNameStyle = {
     fontFamily: "'Russo One', sans-serif",
     fontSize: "24px",
   };
+
+  const location = useLocation();
 
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   
@@ -14,12 +17,12 @@ const Navbar = ({setSection, section}) => {
     <div className="bg-slate-900 items-center align-middle h-fit w-full flex flex-col justify-between lg:flex-row">
       <div className="w-full lg:w-1/3 flex flex-row justify-between items-center align-middle">
         <div className="flex flex-row items-center align-middle pl-6 ">
-          <button onClick={() => setSection("home")} className="flex flex-row items-center align-middle">
+          <Link to={"/"} className="flex flex-row items-center align-middle">
             <img src={Logo} className="mr-12" alt="logo" width={60} height={60} />
-          </button>
-          <button onClick={() => setSection("home")} className="flex flex-row items-center align-middle">
+          </Link>
+          <Link to="/" className="flex flex-row items-center align-middle">
             <h1 style={companyNameStyle} className="text-2xl flex flex-row"><div className="text-cyan-300">Virtual</div>&nbsp;<div className="text-red-600">Deck</div></h1>
-          </button>
+          </Link>
         </div>
         <div className="flex lg:hidden">
           <button className="flex flex-row items-center align-middle px-2" onClick={() => setNavbarOpen(!navbarOpen)}>
@@ -32,50 +35,50 @@ const Navbar = ({setSection, section}) => {
       <nav className="px-4 bg-slate-900 text-white flex flex-row justify-between items-center align-middle hidden lg:flex">
         <div className="hidden w-full lg:block" id="navbar-default">
           <ul className="text-lg flex flex-row justify-between">
-            <li className={`hover:text-gray-400 px-2 ${section === "home" ? "text-red-500" : ""}`}>
-              <button className="" onClick={() => setSection("home")}>
+            <li className={`hover:text-gray-400 px-2 ${location.pathname === "/" ? "text-red-500" : ""}`}>
+              <Link className="" to="/">
                 Home
-              </button>
+              </Link>
             </li>
-            <li className={`hover:text-gray-400 px-2 ${section === "about" ? "text-red-500" : ""}`}>
-              <button className="" onClick={() => setSection("about")}>
+            <li className={`hover:text-gray-400 px-2 ${location.pathname === "/about" ? "text-red-500" : ""}`}>
+              <Link className="" to="/about">
                 About
-              </button>
+              </Link>
             </li>
-            <li className={`hover:text-gray-400 px-2 ${section === "download" ? "text-red-500" : ""}`}>
-              <button className="" onClick={() => setSection("download")}>
+            <li className={`hover:text-gray-400 px-2 ${location.pathname === "/downloads" ? "text-red-500" : ""}`}>
+              <Link className="" to="/downloads">
                 Download
-              </button>
+              </Link>
             </li>
-            <li className={`hover:text-gray-400 px-2 ${section === "contact" ? "text-red-500" : ""}`}>
-              <button className="" onClick={() => setSection("contact")}>
+            <li className={`hover:text-gray-400 px-2 ${location.pathname === "/contact" ? "text-red-500" : ""}`}>
+              <Link className="" to="/contact">
                 Contact
-              </button>
+              </Link>
             </li>
           </ul>
         </div>
       </nav>
       <div className={`lg:hidden border-t border-gray-600 w-5/6 flex justify-center ${navbarOpen ? "block" : "hidden"}`}>
           <ul className="text-lg flex flex-col items-start ">
-            <li className={`${section === "home" ? "text-red-500" : ""}`}>
-              <button className="" onClick={() => setSection("home")}>
+            <li className={`${location.pathname === "/" ? "text-red-500" : ""}`}>
+              <Link className="" to="/">
                 Home
-              </button>
+              </Link>
             </li>
-            <li className={`${section === "about" ? "text-red-500" : ""}`}>
-              <button className="" onClick={() => setSection("about")}>
+            <li className={`${location.pathname === "/about" ? "text-red-500" : ""}`}>
+              <Link className="" to="/about">
                 About
-              </button>
+              </Link>
             </li>
-            <li className={`${section === "download" ? "text-red-500" : ""}`}>
-              <button className="" onClick={() => setSection("download")}>
+            <li className={`${location.pathname === "/downloads" ? "text-red-500" : ""}`}>
+              <Link className="" to="/downloads">
                 Download
-              </button>
+              </Link>
             </li>
-            <li className={`${section === "contact" ? "text-red-500" : ""}`}>
-              <button className="" onClick={() => setSection("contact")}>
+            <li className={`${location.pathname === "/contact" ? "text-red-500" : ""}`}>
+              <Link className="" to="/contact">
                 Contact
-              </button>
+              </Link>
             </li>
           </ul>
         </div>
