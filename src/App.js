@@ -16,7 +16,7 @@ function App() {
   };
 
   return (
-    <div className="h-screen w-screen bg-gray-700 flex flex-col text-white">
+    <div className="h-full w-full bg-gray-700 flex flex-col text-white">
       <Navbar section={section} setSection={setSection} />
       {section === "home" && <Home GoToWindowsDownload={GoToWindowsDownload} />}
       {section === "about" && <About />}
