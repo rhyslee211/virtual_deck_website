@@ -6,7 +6,7 @@ const OAuth2 = google.auth.OAuth2;
 
 
 exports.handler = async (event, context) => {
-  const { name, email, message } = JSON.parse(event.body);
+  const { name, email, message, type, subject } = JSON.parse(event.body);
 
   console.log(name, email, message);
 
@@ -38,8 +38,8 @@ exports.handler = async (event, context) => {
 
   const mailOptions = {
     to: 'rhyslee211@gmail.com',
-    subject: `New message from ${name}`,
-    text: `From: ${email} \n\n${message}`,
+    subject: `${subject} ${name ? `from ${name}` : ''}`,
+    text: `${email ? `From ${email}` : ''} \n${type}\n${message}`,
   };
 
   try {
