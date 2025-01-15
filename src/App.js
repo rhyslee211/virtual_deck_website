@@ -3,7 +3,7 @@ import Home from './components/Home.jsx'
 import About from './components/About.jsx'
 import Download from './components/Download.jsx'
 import Contact from './components/Contact.jsx'
-import { React, useState , useContext } from 'react';
+import { React, useState } from 'react';
 
 function App() {
 

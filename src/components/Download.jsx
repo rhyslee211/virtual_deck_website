@@ -3,7 +3,7 @@ import DownloadCard from "./DownloadCard";
 
 const Download = ({downloadType}) => {
 
-    const [downloadDictionary, setDownloadDictionary] = useState({
+    const downloadDictionary = useState({
         "windowsLatest": {
             name: "Windows Latest",
             os: "Windows",
@@ -17,7 +17,7 @@ const Download = ({downloadType}) => {
     useEffect(() => {
         setDownloadInfo(downloadDictionary[downloadType] || null);
         console.log(downloadInfo);
-    }, [downloadType, downloadDictionary]);
+    }, [downloadType, downloadDictionary, downloadInfo]);
 
     return (
     <div>

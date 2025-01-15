@@ -20,7 +20,7 @@ const Home = ({GoToWindowsDownload}) => {
             </div>
         </div>
         <div className="flex flex-row items-center py-16 px-4">
-            <img src={VirtualDeckDemoImage} height={960} width={960} alt="Virtual Deck Demo Image" className="border border-4 border-black" />
+            <img src={VirtualDeckDemoImage} height={960} width={960} alt="Virtual Deck Demo" className="border border-4 border-black" />
         </div>
         <div>
 
