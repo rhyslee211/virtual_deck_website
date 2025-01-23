@@ -18,9 +18,9 @@ function App() {
   };
 
   return (
-    <div className="h-full w-full bg-gray-700 flex flex-col text-white">
+    <div className="h-screen w-full bg-gray-700 flex flex-col text-white">
       <Navbar />
-      <div className="flex-grow overflow-y-auto">
+      <div className="overflow-y-auto flex-grow scrollbar-thin scrollbar-thumb-gray-800 scrollbar-track-gray-700">
         <Routes>
           <Route path="/" element={<Home GoToWindowsDownload={GoToWindowsDownload} />} />
           <Route path="/about" element={<About />} />

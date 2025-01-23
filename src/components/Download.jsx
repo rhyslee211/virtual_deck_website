@@ -46,7 +46,7 @@ const Download = ({downloadType}) => {
     <div className="flex flex-col items-center">
         <div className="text-white text-2xl font-bold mt-4">Downloads</div>
         <div className="text-white text-lg font-bold mt-4 underline">Platforms</div>
-        <div className="flex flex-row items-center justify-center mt-4">
+        <div className="flex flex-col lg:flex-row items-center justify-center mt-4">
             <button className={`flex flex-col items-center justify-center rounded-lg w-32 h-32 ${selectedPlatform === "Windows" ? "bg-slate-800" : ""}`} onClick={() => setSelectedPlatform("Windows")}>
                 <IoLogoWindows size={100} />
                 <div className="text-white">Windows</div>
@@ -57,7 +57,7 @@ const Download = ({downloadType}) => {
             </button>
             <button className={`flex flex-col items-center justify-center rounded-lg w-32 h-32 ${selectedPlatform === "Linux" ? "bg-slate-800" : ""}`} onClick={() => setSelectedPlatform("Linux")}>
                 <FaLinux size={100} />
-                <div className="text-white">Mac</div>
+                <div className="text-white">Linux</div>
             </button>
         </div>
         <div className="bg-gray-700 h-full flex-grow flex flex-col items-center justify-center mt-8">

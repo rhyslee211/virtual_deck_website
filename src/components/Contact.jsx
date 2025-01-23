@@ -57,7 +57,7 @@ const Contact = () => {
 
   return (
     <div className="lg:flex lg:justify-center lg:m-4 rounded-lg">
-      <div className="justify-evenly flex flex-col items-center border border-2 border-gray-800 rounded-lg mx-6 my-4 lg:w-1/3 shadow-lg p-1 lg:p-4">
+      <div className="justify-evenly flex flex-col items-center border border-2 border-gray-800 bg-slate-800 rounded-lg mx-6 my-4 lg:w-1/3 shadow-lg p-1 lg:p-4">
         <h1 className="text-lg font-bold p-2">Report a Bug or Request a Feature</h1>
         {result !== null && (
           <div className="text-red-400 text-sm">
@@ -80,15 +80,15 @@ const Contact = () => {
         )}
         <div className="items-center w-full px-8">
           <div>Name:</div>
-          <input onChange={handleChange} value={emailForm.name} type="text" id="name" name="name" placeholder="Your name...(Optional)" className="bg-slate-800 text-white shadow-inner w-full rounded-md px-1" />
+          <input onChange={handleChange} value={emailForm.name} type="text" id="name" name="name" placeholder="Your name...(Optional)" className="bg-gray-700 text-white shadow-inner w-full rounded-md px-1" />
         </div>
         <div className="items-center w-full px-8">
           <div>Email:</div>
-          <input onChange={handleChange} value={emailForm.email} type="text" id="email" name="email" placeholder="Your email...(Optional)" className="shadow-inner bg-slate-800 text-white w-full rounded-md px-1" />
+          <input onChange={handleChange} value={emailForm.email} type="text" id="email" name="email" placeholder="Your email...(Optional)" className="shadow-inner bg-gray-700 text-white w-full rounded-md px-1" />
         </div>
         <div className="items-center w-full px-8">
           <div>Report Type:</div>
-          <select id="dropdown" name="type" value={emailForm.type} onChange={handleChange} className="shadow-inner bg-slate-800 text-white w-full rounded-md px-1">
+          <select id="dropdown" name="type" value={emailForm.type} onChange={handleChange} className="shadow-inner bg-gray-700 text-white w-full rounded-md px-1">
             <option value="" disabled>
               -- Select an option --
             </option>
@@ -99,11 +99,11 @@ const Contact = () => {
         </div>
         <div className="items-center w-full px-8">
           <div>Subject:</div>
-          <input onChange={handleChange} value={emailForm.subject} type="text" id="subject" name="subject" placeholder="Subject Line" className="shadow-inner bg-slate-800 text-white w-full rounded-md px-1" />
+          <input onChange={handleChange} value={emailForm.subject} type="text" id="subject" name="subject" placeholder="Subject Line" className="shadow-inner bg-gray-700 text-white w-full rounded-md px-1" />
         </div>
         <div className="items-center w-full px-8">
           <div>Message:</div>
-          <textarea onChange={handleChange} value={emailForm.message} type="text" id="message" rows="5" name="message" placeholder="Your message..." className="shadow-inner resize-none bg-slate-800 text-white w-full rounded-md px-1" />
+          <textarea onChange={handleChange} value={emailForm.message} type="text" id="message" rows="5" name="message" placeholder="Your message..." className="shadow-inner resize-none bg-gray-700 text-white w-full rounded-md px-1" />
         </div>
         <button className="bg-blue-500 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded" id="submitButton" onClick={handleSubmit}>Submit</button>
       </div>
