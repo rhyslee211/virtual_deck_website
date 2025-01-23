@@ -20,12 +20,14 @@ function App() {
   return (
     <div className="h-full w-full bg-gray-700 flex flex-col text-white">
       <Navbar />
-      <Routes>
+      <div className="flex-grow overflow-y-auto">
+        <Routes>
           <Route path="/" element={<Home GoToWindowsDownload={GoToWindowsDownload} />} />
           <Route path="/about" element={<About />} />
           <Route path="/downloads" element={<Downloads downloadType={downloadType} />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+      </div>
     </div>
   );
 }
