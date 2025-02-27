@@ -23,7 +23,7 @@ function App() {
       <div className="overflow-y-auto flex-grow scrollbar-thin scrollbar-thumb-gray-800 scrollbar-track-gray-700">
         <Routes>
           <Route path="/" element={<Home GoToWindowsDownload={GoToWindowsDownload} />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/about" element={<About GoToWindowsDownload={GoToWindowsDownload} GoToContact={()=>{navigate("/contact")}} />} />
           <Route path="/downloads" element={<Downloads downloadType={downloadType} />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

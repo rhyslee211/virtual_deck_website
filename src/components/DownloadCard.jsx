@@ -12,17 +12,21 @@ downloadInfo is a dictionary with the following keys
 */
 
 const DownloadCard = ({downloadInfo}) => {
+
+    if (!downloadInfo) {
+        return null;
+    }
+
     return(
     <div className="flex flex-col items-center border border-gray-500 rounded p-4 bg-gray-800 m-2">
-    {downloadInfo !== null && downloadInfo.os === "Windows" && <IoLogoWindows size={100} />}
-    {downloadInfo !== null &&
+        {downloadInfo.os === "Windows" && <IoLogoWindows size={100} />}
         <div className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-4 h-fit w-48">
             <button onClick={() => window.open(downloadInfo.url)}>
-                <div className="flex flex-row items-center text-center">
-                    {downloadInfo.name || downloadInfo.os} {downloadInfo.version}
+                <div className="flex flex-row items-center text-center truncate overflow-hidden">
+                    <span className='truncate'>{downloadInfo.name || downloadInfo.os} {downloadInfo.version}</span>
                 </div>
             </button>
-        </div>}
+        </div>
     </div>
     );
 }

@@ -9,26 +9,8 @@ const Download = ({downloadType}) => {
         "windowsLatest": {
             name: "Windows Latest",
             os: "Windows",
-            version: "0.9.0", 
-            url: "https://github.com/rhyslee211/virtual-deck/releases/download/V0.1-windows-beta/Virtual_Deck.exe"
-        },
-        "windowsBeta": {
-            name: "Windows Beta",
-            os: "Windows",
             version: "0.1.0", 
-            url: ""
-        },
-        "windowsAlpha": {
-            name: "Windows Alpha",
-            os: "Windows",
-            version: "0.0.1", 
-            url: ""
-        },
-        "windowsOld": {
-            name: "Windows Old",
-            os: "Windows",
-            version: "0.0.0",
-            url: ""
+            url: "https://github.com/rhyslee211/virtual-deck/releases/download/v0.1.0_Windows/Virtual.Deck.exe"
         }
     });
 
@@ -62,9 +44,9 @@ const Download = ({downloadType}) => {
         </div>
         <div className="bg-gray-700 h-full flex-grow flex flex-col items-center justify-center mt-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                {selectedPlatform === "Windows" && Object.entries(windowsDownloadDictionary).map(([key, value]) => (
-                    <div key={key}>
-                    <DownloadCard downloadInfo={value} />
+                {selectedPlatform === "Windows" && Object.entries(windowsDownloadDictionary).map(([key, value],index,array) => (
+                    <div key={key} className={index === array.length - 1 && array.length % 2 !== 0 ? "lg:col-span-2 flex justify-center" : ""}>
+                        <DownloadCard downloadInfo={value} />
                     </div>
                 ))}
                 {selectedPlatform === "Mac" && <div className="flex text-center">Mac versions available soon!</div>}
