@@ -80,6 +80,11 @@ const Navbar = () => {
                 Download
               </Link>
             </li>
+            <li className={`${location.pathname === "/guide" ? "text-red-500" : ""}`}>
+              <Link className="" to="/guide">
+                Guide
+              </Link>
+            </li>
             <li className={`${location.pathname === "/contact" ? "text-red-500" : ""}`}>
               <Link className="" to="/contact">
                 Contact

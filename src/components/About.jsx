@@ -11,13 +11,13 @@ const About = ({GoToWindowsDownload , GoToContact}) => {
     return (
     <div className="flex flex-col items-center justify-start h-fit w-full text-white p-4">
         <h1 style={companyNameStyle} className="flex flex-row my-4"><div className="text-cyan-300 text-4xl">Virtual</div>&nbsp;<div className="text-red-600 text-4xl">Deck</div></h1>
-        <div className="flex flex-col items-center justify-center w-1/3 mb-4">
+        <div className="flex flex-col items-center justify-center w-full lg:w-1/3 mb-4">
             <h2 className="text-2xl font-bold underline">What is Virtual Deck?</h2>
             <p className="text-center mt-2">Virtual Deck is a powerful, intuitive, and cost-effective virtual macro deck software designed with streamers in mind. Whether you're managing your OBS scenes, controlling Twitch commands, or executing complex programs with a single tap, Virtual Deck provides a seamless way to streamline your setup.</p>
             <p className="text-center mt-2">With a customizable interface, responsive controls, OBS and Twitch integration, Virtual Deck gives you the freedom to create the perfect setup tailored to your streaming needs.</p>
         </div>
 
-        <div className="flex flex-col items-center justify-center w-1/3 mb-4">
+        <div className="flex flex-col items-center justify-center w-full lg:w-1/3 mb-4">
             <h2 className="text-2xl font-bold underline">Features</h2>
             <ul className="list-disc list-outside text-white mt-2">
                 <li>OBS Commands:
@@ -44,7 +44,7 @@ const About = ({GoToWindowsDownload , GoToContact}) => {
             </ul>
         </div>
 
-        <div className="flex flex-col items-center justify-center w-1/3 mb-4">
+        <div className="flex flex-col items-center justify-center w-full lg:w-1/3 mb-4">
             <h2 className="text-2xl font-bold underline">About the Developer</h2>
             <img src={profileImage} alt="Rhys Lee" className="mt-2 mb-4 rounded-full h-48 w-48" />
             <p className="text-center mt-2">Virtual Deck is developed by me, <a className="underline text-blue-400 hover:text-white" href="https://www.rhyslee.dev/" rel="noopener noreferrer" target="_blank">Rhys Lee</a>, a passionate software developer and Twitch viewer/ocassional streamer (ocassionally being maybe once a year). I created Virtual Deck to create a cost-effective alternative to physical macro decks and improve the streaming experience for content creators. Click below to download Virtual Deck or contact me about issues with the tool or features you would like to request.</p>
