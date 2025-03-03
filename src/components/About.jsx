@@ -47,7 +47,7 @@ const About = ({GoToWindowsDownload , GoToContact}) => {
         <div className="flex flex-col items-center justify-center w-1/3 mb-4">
             <h2 className="text-2xl font-bold underline">About the Developer</h2>
             <img src={profileImage} alt="Rhys Lee" className="mt-2 mb-4 rounded-full h-48 w-48" />
-            <p className="text-center mt-2">Virtual Deck is developed by me, <a className="underline text-blue-400 hover:text-white" href="https://www.rhyslee.dev/" target="_blank">Rhys Lee</a>, a passionate software developer and Twitch viewer/ocassional streamer (ocassionally being maybe once a year). I created Virtual Deck to create a cost-effective alternative to physical macro decks and improve the streaming experience for content creators. Click below to download Virtual Deck or contact me about issues with the tool or features you would like to request.</p>
+            <p className="text-center mt-2">Virtual Deck is developed by me, <a className="underline text-blue-400 hover:text-white" href="https://www.rhyslee.dev/" rel="noopener noreferrer" target="_blank">Rhys Lee</a>, a passionate software developer and Twitch viewer/ocassional streamer (ocassionally being maybe once a year). I created Virtual Deck to create a cost-effective alternative to physical macro decks and improve the streaming experience for content creators. Click below to download Virtual Deck or contact me about issues with the tool or features you would like to request.</p>
         </div>
         
         <button className="text-white text-md font-bold mt-4 bg-red-600 hover:bg-red-700 rounded-lg px-4 py-2 w-32" onClick={GoToWindowsDownload}>Download</button>

@@ -11,7 +11,7 @@ const Guide = () => {
                 <p className="text-white text-center mt-2">This guide will walk you through the process of setting up Virtual Deck on your computer and configuring it to work with OBS and Twitch. If you have any questions or issues during the setup process, please don't hesitate to <a className="underline text-blue-400 hover:text-white" href="/contact" target="">contact me</a> for assistance.</p>
                 <div className="flex flex-col items-center justify-center w-full mb-4">
                     <h2 className="text-2xl font-bold underline mt-4">Step 1: Download and Install Virtual Deck</h2>
-                    <p className="text-center mt-2">To begin, <a className="text-blue-400 hover:text-white underline" href="/downloads" target="_blank">download</a> the latest version of Virtual Deck for your operating system. Once the download is complete, run the installer and follow the on-screen instructions to install the software on your computer.</p>
+                    <p className="text-center mt-2">To begin, <a className="text-blue-400 hover:text-white underline" rel="noopener noreferrer" href="/downloads" target="_blank">download</a> the latest version of Virtual Deck for your operating system. Once the download is complete, run the installer and follow the on-screen instructions to install the software on your computer.</p>
                 </div>
                 <div className="flex flex-col items-center justify-center w-full mb-4">
                     <h2 className="text-2xl font-bold underline mt-4">Step 2: Connecting Twitch and OBS</h2>
