@@ -6,7 +6,7 @@ const Guide = () => {
     return (
     <div>
         <div className="flex flex-col items-center justify-center h-full w-full text-white p-4">
-            <div className="flex flex-col items-center justify-center w-1/3 mb-4">
+            <div className="flex flex-col items-center justify-center w-full lg:w-1/3 mb-4">
                 <h1 className="text-4xl text-white font-bold text-center underline my-4">Setup Guide</h1>
                 <p className="text-white text-center mt-2">This guide will walk you through the process of setting up Virtual Deck on your computer and configuring it to work with OBS and Twitch. If you have any questions or issues during the setup process, please don't hesitate to <a className="underline text-blue-400 hover:text-white" href="/contact" target="">contact me</a> for assistance.</p>
                 <div className="flex flex-col items-center justify-center w-full mb-4">
