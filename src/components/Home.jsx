@@ -1,13 +1,16 @@
 import React from "react";
 import VirtualDeckLogo from "../assets/virtualDeckLogo.png";
-import VirtualDeckDemoImage from "../assets/VirtualDeckDemoImage.png";
+import VirtualDeckDemoVideo from "../assets/VirtualDeckButtonCreationGifLike.mp4";
 import { IoLogoWindows } from "react-icons/io";
 
 const Home = ({GoToWindowsDownload}) => {
     return (
-    <div className="bg-gray-700 h-full flex-grow flex flex-col items-center justify-between">
+    <div className="bg-gray-700 h-fit flex-grow flex flex-col items-center justify-between">
         <div className="flex flex-col items-center">
-            <img src={VirtualDeckLogo} height={240} width={240} alt="Homepage Logo" />
+            <div className="flex flex-row items-center justify-center  w-full">
+                <img src={VirtualDeckLogo} height={240} width={240} alt="Homepage Logo" />
+                <div className="font-bold text-3xl bg-gradient-to-r from-white to-gray-300 leading-tight text-transparent bg-clip-text">Your customizable <br /> streaming solution.</div>
+            </div>
             <div className="flex flex-row items-center justify-center">
                 <div className="flex flex-col items-center">
                     <IoLogoWindows size={100} />
@@ -20,7 +23,9 @@ const Home = ({GoToWindowsDownload}) => {
             </div>
         </div>
         <div className="flex flex-row items-center py-16 px-4">
-            <img src={VirtualDeckDemoImage} height={960} width={960} alt="Virtual Deck Demo" className="border border-4 border-black" />
+            <video autoPlay loop muted className="rounded-lg border-2 border-black" height={800} width={800}>
+                <source src={VirtualDeckDemoVideo} type="video/mp4" />
+            </video>
         </div>
         <div>
 

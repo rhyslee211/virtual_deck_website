@@ -3,6 +3,7 @@ import Home from './components/Home.jsx'
 import About from './components/About.jsx'
 import Downloads from './components/Download.jsx'
 import Contact from './components/Contact.jsx'
+import Guide from './components/Guide.jsx'
 import { React, useState } from 'react';
 import { Routes, Route , useNavigate } from 'react-router-dom';
 
@@ -25,6 +26,7 @@ function App() {
           <Route path="/" element={<Home GoToWindowsDownload={GoToWindowsDownload} />} />
           <Route path="/about" element={<About GoToWindowsDownload={GoToWindowsDownload} GoToContact={()=>{navigate("/contact")}} />} />
           <Route path="/downloads" element={<Downloads downloadType={downloadType} />} />
+          <Route path="/guide" element={<Guide />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>

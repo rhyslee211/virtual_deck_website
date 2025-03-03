@@ -56,7 +56,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="lg:flex lg:justify-center lg:m-4 rounded-lg">
+    <div className="lg:flex lg:justify-center lg:m-4 rounded-lg h-fit">
       <div className="justify-evenly flex flex-col items-center border border-2 border-gray-800 bg-slate-800 rounded-lg mx-6 my-4 lg:w-1/3 shadow-lg p-1 lg:p-4">
         <h1 className="text-lg font-bold p-2">Report a Bug or Request a Feature</h1>
         {result !== null && (

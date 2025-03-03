@@ -25,7 +25,7 @@ const Download = ({downloadType}) => {
     }, [downloadType, windowsDownloadDictionary, downloadInfo]);
 
     return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center h-fit">
         <div className="text-white text-2xl font-bold mt-4">Downloads</div>
         <div className="text-white text-lg font-bold mt-4 underline">Platforms</div>
         <div className="flex flex-col lg:flex-row items-center justify-center mt-4">
